@@ -1,0 +1,11 @@
+{
+  "name": "cordova-plugin-fix-runpath",
+  "version": "1.0.0",
+  "description": "Fix for LD_RUNPATH_SEARCH_PATHS conflict in iOS builds",
+  "cordova": {
+    "id": "cordova-plugin-fix-runpath",
+    "platforms": ["ios"]
+  },
+  "author": "Jonas Cerantola",
+  "license": "MIT"
+}
