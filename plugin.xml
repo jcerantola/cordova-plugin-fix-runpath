@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-fix-runpath"
+        version="1.0.0">
+  <name>Fix LD_RUNPATH_SEARCH_PATHS</name>
+  <description>Plugin auxiliar para corrigir conflitos de LD_RUNPATH_SEARCH_PATHS com CocoaPods no iOS</description>
+  <license>MIT</license>
+  <author>Jonas Cerantola</author>
+
+  <platform name="ios">
+    <config-file target="project.pbxproj" parent="/* Begin XCBuildConfiguration section */">
+      <build-config>
+        <name>Debug</name>
+        <build-settings>
+          <LD_RUNPATH_SEARCH_PATHS>$(inherited)</LD_RUNPATH_SEARCH_PATHS>
+        </build-settings>
+      </build-config>
+      <build-config>
+        <name>Release</name>
+        <build-settings>
+          <LD_RUNPATH_SEARCH_PATHS>$(inherited)</LD_RUNPATH_SEARCH_PATHS>
+        </build-settings>
+      </build-config>
+    </config-file>
+  </platform>
+</plugin>
